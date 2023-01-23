@@ -21,6 +21,7 @@
                     colors: {
                         coffee: '#B68C5A',
                         black: '#414040',
+                        lightgrey: '#E7E7E7',
                         grey: '#707070',
                     },
                     fontFamily: {
@@ -37,8 +38,9 @@
 
 <body>
     <header>
+        <!-- nav bar from flow bite - modified it START -->
         <!-- nav start-->
-        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded mb-12">
+        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
                 <!-- nav logo -->
                 <img src="images/logo2.png" alt="Justice Logo" />
@@ -77,21 +79,56 @@
                         </li>
                         <li>
                             <a href="#"
-                                class="block py-2 pl-3 pr-4 text-grey font-poppins text-lg rounded hover:text-coffee md:p-0">Contact Us</a>
+                                class="block py-2 pl-3 pr-4 text-grey font-poppins text-lg rounded hover:text-coffee md:p-0">Contact
+                                Us</a>
                         </li>
                     </ul>
                 </div>
                 <!-- nav btn -->
-                <button class="text-white font-poppins text-lg rounded px-7 py-4 bg-coffee border-red-700 h-20 my-5">Free Consultation</button>
+                <button class="text-white font-poppins text-lg rounded px-7 py-4 bg-coffee h-20 my-5 font-semibold hover:text-black">Free
+                    Consultation</button>
             </div>
         </nav>
         <!-- nav end -->
+        <!-- nav bar from flow bite - modified it END-->
 
         <!-- banner start -->
-        <h1>Banner</h1>
+        <div class="h-screen pt-20 bg-[url('images/banner.png')] bg-cover mb-32">
+            <div class="h-full max-w-7xl mx-auto px-5 flex justify-center items-center">
+                <div class="font-eg text-center">
+                    <h1 class="text-7xl text-white font-eg">We Provide Effective</h1>
+                    <h1 class="text-7xl text-white font-eg mt-5">Legal Solutions</h1>
+                    <p class=" text-2xl text-lightgrey font-poppins mt-10">There are many variations of passages of
+                        Lorem Ipsum available, but the majority have suffered alteration in some form, by injected
+                        humour.</p>
+
+                    <!-- search from flow bite - modified it START -->    
+                    <form class="md:flex items-center mt-5">
+                        <div class="relative w-full">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 "> 
+                            </div>
+                            <input type="text" id="voice-search"
+                                class="mb-5 md:mb-0 bg-white text-black text-lg rounded-lg block w-full pl-10 p-2.5 "
+                                placeholder="Search your services" required>
+                        </div>
+                        <button type="submit"
+                            class="font-eg py-2 px-5 ml-3 text-white text-lg rounded bg-coffee font-semibold hover:text-black">Search
+                        </button>
+                    </form>
+                    <!-- search from flow bite - modified it END -->
+                </div>
+            </div>
+        </div>
         <!-- banner end -->
     </header>
 
+    <main>
+
+    </main>
+    
+    <footer>
+
+    </footer>
     <!-- flow bite JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
 </body>
