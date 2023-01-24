@@ -22,9 +22,10 @@
                 extend: {
                     colors: {
                         coffee: '#B68C5A',
-                        black: '#414040',
+                        lightblack: '#414040',
                         lightgrey: '#E7E7E7',
                         grey: '#707070',
+                        silver: '#CFCFCF',
                     },
                     fontFamily: {
                         eb: ["EB Garamond", "serif"],
@@ -48,7 +49,7 @@
                 <img src="images/logo2.png" alt="Justice Logo" />
                 <!-- hamburger menu -->
                 <button data-collapse-toggle="navbar-default" type="button"
-                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 :text-gray-400"
                     aria-controls="navbar-default" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
@@ -61,7 +62,7 @@
                 <!-- nav list -->
                 <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                     <ul
-                        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:border-gray-700">
+                        class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white text-grey">
                         <li>
                             <a href="#"
                                 class="block py-2 pl-3 pr-4 text-grey font-poppins text-lg rounded hover:text-coffee md:p-0"
@@ -87,9 +88,63 @@
                     </ul>
                 </div>
                 <!-- nav btn -->
-                <button
-                    class="text-white font-poppins text-lg rounded px-7 py-4 bg-coffee h-20 my-5 font-semibold hover:text-black">Free
+                <button data-modal-target="defaultModal" data-modal-toggle="defaultModal"
+                    class="text-white font-poppins text-lg rounded px-7 py-4 bg-coffee h-20 my-5 font-semibold hover:text-black ">Free
                     Consultation</button>
+
+                <!-- modal from flow bite - modified it START -->
+                <!-- Main modal -->
+                <div id="defaultModal" tabindex="-1" aria-hidden="true"
+                    class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+                    <div class="relative w-full h-full max-w-2xl md:h-auto">
+                        <!-- Modal content -->
+                        <div class="relative bg-white rounded-lg shadow">
+                            <!-- Modal header -->
+                            <div class="flex items-start justify-between p-4 border-b rounded-t ">
+                                <h3 class="text-xl font-semibold text-gray-900 font-eg">
+                                    Terms of Service
+                                </h3>
+                                <button type="button"
+                                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center "
+                                    data-modal-hide="defaultModal">
+                                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="p-6 space-y-6">
+                                <p class="text-base leading-relaxed font-poppins text-gray-500">
+                                    Our firm provides legal consultation services to clients. By utilizing our services, you agree to the following terms:
+                                    <br> <br>
+                                    1. All information and advice provided by our firm is intended for general informational purposes only and is not legal advice.
+                                    <br>
+                                    2. Our firm does not establish an attorney-client relationship with any individual or entity until a written retainer agreement is executed by both parties.
+                                    <br>
+                                    3. Our firm is not responsible for any actions taken or not taken based on the information provided during consultation.
+                                    <br>
+                                    4. Our firm reserves the right to decline any consultation request at its discretion.
+                                    <br>
+                                    5. Our firm's fees for consultation services will be discussed and agreed upon prior to the initiation of any services.
+                                </p>
+                            </div>
+                            <!-- Modal footer -->
+                            <div
+                                class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b ">
+                                <button data-modal-hide="defaultModal" type="button"
+                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                                    Accept</button>
+                                <button data-modal-hide="defaultModal" type="button"
+                                    class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Decline</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal from flow bite - modified it END -->
             </div>
         </nav>
         <!-- nav end -->
@@ -101,10 +156,7 @@
                 <div class="font-eg text-center">
                     <h1 class="text-7xl text-white font-eg">We Provide Effective</h1>
                     <h1 class="text-7xl text-white font-eg mt-5">Legal Solutions</h1>
-                    <p class=" text-2xl text-lightgrey font-poppins mt-10 w-10/12 mx-auto">There are many variations of
-                        passages of
-                        Lorem Ipsum available, but the majority have suffered alteration in some form, by injected
-                        humour.</p>
+                    <p class=" text-2xl text-lightgrey font-poppins mt-10 w-10/12 mx-auto">Navigating the legal landscape with clarity and precision</p>
 
                     <!-- search from flow bite - modified it START -->
                     <form class="md:flex items-center mt-5">
@@ -130,37 +182,29 @@
         <!-- Legal Practice START-->
         <section class="container mx-auto">
             <div class="text-center px-3 mb-5">
-                <h1 class="text-7xl text-black font-eg">The Legal Practice Area</h1>
-                <p class="text-2xl text-black font-poppins mt-10 w-1/2 mx-auto">There are many variations of passages of
-                    Lorem
-                    Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                <h1 class="text-7xl text-lightblack font-eg">The Legal Practice Area</h1>
+                <p class="text-2xl text-grey font-poppins mt-10 w-1/2 mx-auto">Specializing in Business, Criminal, and Child Support law</p>
             </div>
 
             <!-- grid layout -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-12 gap-3 px-3">
                 <div class="text-center bg-white py-10 h-[630px] md:h-[600px] lg:h-[500px] mx-auto">
                     <img class="img-fluid mx-auto mt-10" src="images/business.png" alt="">
-                    <h1 class="text-5xl text-black font-eg mt-10">Business Law</h1>
-                    <p class=" text-2xl text-grey font-poppins mt-10">There are many variations of passages of
-                        Lorem Ipsum available, but the majority have suffered alteration in some form, by injected
-                        humour.</p>
+                    <h1 class="text-5xl text-lightblack font-eg mt-10">Business Law</h1>
+                    <p class=" text-2xl text-grey font-poppins mt-10">Our business law practice provides comprehensive legal support to businesses of all sizes.</p>
                     <img class="img-fluid mx-auto mt-10" src="images/Frame.png" alt="">
                 </div>
                 <div
                     class="text-center bg-gradient-to-t from-white to-gray-100 py-10 h-[630px] md:h-[600px] lg:h-[500px] mx-auto">
                     <img class="img-fluid mx-auto mt-10" src="images/criminal.png" alt="">
-                    <h1 class="text-5xl text-black font-eg mt-10">Criminal Law</h1>
-                    <p class=" text-2xl text-grey font-poppins mt-10">There are many variations of passages of
-                        Lorem Ipsum available, but the majority have suffered alteration in some form, by injected
-                        humour.</p>
+                    <h1 class="text-5xl text-lightblack font-eg mt-10">Criminal Law</h1>
+                    <p class=" text-2xl text-grey font-poppins mt-10">Our criminal law practice provides representation to individuals facing criminal charges.</p>
                     <img class="img-fluid mx-auto mt-10" src="images/Frame.png" alt="">
                 </div>
                 <div class="text-center py-10 h-[630px] md:h-[600px] lg:h-[500px] mx-auto">
                     <img class="img-fluid mx-auto mt-10" src="images/child.png" alt="">
-                    <h1 class="text-5xl text-black font-eg mt-10">Child Support</h1>
-                    <p class=" text-2xl text-grey font-poppins mt-10">There are many variations of passages of
-                        Lorem Ipsum available, but the majority have suffered alteration in some form, by injected
-                        humour.</p>
+                    <h1 class="text-5xl text-lightblack font-eg mt-10">Child Support</h1>
+                    <p class=" text-2xl text-grey font-poppins mt-10">Our child support law practice provides legal support to individuals involved in child support cases.</p>
                     <img class="img-fluid mx-auto mt-10" src="images/Frame.png" alt="">
                 </div>
             </div>
@@ -170,10 +214,8 @@
         <!-- client section START -->
         <section>
             <div class="text-center px-3 mb-5">
-                <h1 class="text-7xl text-black font-eg">What Our Client Say</h1>
-                <p class="text-2xl text-black font-poppins mt-10 w-1/2 mx-auto">There are many variations of passages of
-                    Lorem
-                    Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                <h1 class="text-7xl text-lightblack font-eg">What Our Client Say</h1>
+                <p class="text-2xl text-grey font-poppins mt-10 w-1/2 mx-auto">A legal consultations firm may solicit feedback from its clients in order to improve its services and ensure client satisfaction.</p>
             </div>
 
             <!-- carousel from flow bite - modified it START -->
@@ -194,11 +236,7 @@
                                 Developer</h1>
                             <p
                                 class="w-full lg:w-1/2 text-center mx-auto mt-0 md:mt-5 lg:mt-10 text-white font-poppins text-xs md:text-lg lg:text-2xl">
-                                Contrary to
-                                popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                                classical Latin literature from 45 BC, making it over 2000 years old. Richard
-                                McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of
-                                the more obscure Latin words, consectetur.</p>
+                                The firm kept clients informed and updated throughout the process, and the firm was responsive to clients' questions and concerns.</p>
                         </div>
                     </div>
                     <!-- Item 2 -->
@@ -209,17 +247,13 @@
                         <div class="absolute w-full text-white text-lg text-center my-32">
                             <img class="absolute -top-12 md:top-0 lg:top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 md:w-52 h-28 md:h-60 rounded-full"
                                 src="images/person.png" alt="">
-                            <h1 class="mt-5 md:mt-32 lg:mt-80 text-lg md:text-3xl lg:text-5xl text-white font-eg">Masum
-                                Rahman</h1>
-                            <h1 class="text-base md:text-2xl lg:text-3xl text-white font-eg mt-0 lg:mt-5">Software
+                            <h1 class="mt-5 md:mt-32 lg:mt-80 text-lg md:text-3xl lg:text-5xl text-white font-eg">Faisal
+                                Khan</h1>
+                            <h1 class="text-base md:text-2xl lg:text-3xl text-white font-eg mt-0 lg:mt-5">Full-Stack
                                 Developer</h1>
                             <p
                                 class="w-full lg:w-1/2 text-center mx-auto mt-0 md:mt-5 lg:mt-10 text-white font-poppins text-xs md:text-lg lg:text-2xl">
-                                Contrary to
-                                popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                                classical Latin literature from 45 BC, making it over 2000 years old. Richard
-                                McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of
-                                the more obscure Latin words, consectetur.</p>
+                                The firm had the knowledge and expertise necessary to handle the client's specific legal matter.</p>
                         </div>
                     </div>
                     <!-- Item 3 -->
@@ -230,17 +264,13 @@
                         <div class="absolute w-full text-white text-lg text-center my-32">
                             <img class="absolute -top-12 md:top-0 lg:top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 md:w-52 h-28 md:h-60 rounded-full"
                                 src="images/person.png" alt="">
-                            <h1 class="mt-5 md:mt-32 lg:mt-80 text-lg md:text-3xl lg:text-5xl text-white font-eg">Masum
-                                Rahman</h1>
-                            <h1 class="text-base md:text-2xl lg:text-3xl text-white font-eg mt-0 lg:mt-5">Software
+                            <h1 class="mt-5 md:mt-32 lg:mt-80 text-lg md:text-3xl lg:text-5xl text-white font-eg">Zafran
+                                Ahmed</h1>
+                            <h1 class="text-base md:text-2xl lg:text-3xl text-white font-eg mt-0 lg:mt-5">Font-End
                                 Developer</h1>
                             <p
                                 class="w-full lg:w-1/2 text-center mx-auto mt-0 md:mt-5 lg:mt-10 text-white font-poppins text-xs md:text-lg lg:text-2xl">
-                                Contrary to
-                                popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                                classical Latin literature from 45 BC, making it over 2000 years old. Richard
-                                McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of
-                                the more obscure Latin words, consectetur.</p>
+                                The firm provided a high-quality service and met the client's expectations.</p>
                         </div>
                     </div>
                 </div>
@@ -272,7 +302,7 @@
                     data-carousel-next>
                     <span
                         class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-coffee group-hover:bg-black group-focus:ring-4 group-focus:ring-white">
-                        <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none"
+                        <svg aria-hidden="true" class="w-6 h-6 text-white" fill="none"
                             stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
                             </path>
@@ -288,10 +318,8 @@
         <!-- FAQ Section START -->
         <section>
             <div class="text-center px-3 mb-5 my-20">
-                <h1 class="text-7xl text-black font-eg">Frequently Asked Any Questions</h1>
-                <p class="text-2xl text-black font-poppins mt-10 w-1/2 mx-auto">There are many variations of passages of
-                    Lorem
-                    Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                <h1 class="text-7xl text-lightblack font-eg">Frequently Asked Any Questions</h1>
+                <p class="text-2xl text-grey font-poppins mt-10 w-1/2 mx-auto">An FAQ section for a legal consultations firm may include answers to the following common questions:</p>
             </div>
 
             <!-- accordion from flow bite - modified it START -->
@@ -305,7 +333,7 @@
                                 class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100"
                                 data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
                                 aria-controls="accordion-collapse-body-1">
-                                <span>What is Flowbite?</span>
+                                <span>1. What is the difference between flexbox and grid?</span>
                                 <svg data-accordion-icon class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -317,14 +345,7 @@
                         <div id="accordion-collapse-body-1" class="hidden"
                             aria-labelledby="accordion-collapse-heading-1">
                             <div class="p-5 font-light border border-b-0 border-gray-200">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of
-                                    interactive components built on top of Tailwind CSS including buttons, dropdowns,
-                                    modals, navbars, and more.</p>
-                                <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a
-                                        href="/docs/getting-started/introduction/"
-                                        class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and
-                                    start
-                                    developing websites even faster with components on top of Tailwind CSS.</p>
+                                <p class="mb-2 text-grey">Flexbox is best for creating simple, one-dimensional layouts, while Grid is better for creating more complex, two-dimensional grid-based layouts. Both of them have different use cases and can be used in combination to create more powerful and flexible designs.</p>
                             </div>
                         </div>
                         <h2 id="accordion-collapse-heading-2">
@@ -332,7 +353,7 @@
                                 class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100"
                                 data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
                                 aria-controls="accordion-collapse-body-2">
-                                <span>Is there a Figma file available?</span>
+                                <span>2. What is the purpose of media query?</span>
                                 <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -344,13 +365,7 @@
                         <div id="accordion-collapse-body-2" class="hidden"
                             aria-labelledby="accordion-collapse-heading-2">
                             <div class="p-5 font-light border border-b-0 border-gray-200">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and
-                                    designed using the Figma software so everything you see in the library has a design
-                                    equivalent in our Figma file.</p>
-                                <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                        href="https://flowbite.com/figma/"
-                                        class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                    based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                <p class="mb-2 text-grey">The purpose of media queries is to make web pages responsive and adapt to different screen sizes and resolutions. </p>
                             </div>
                         </div>
                         <h2 id="accordion-collapse-heading-3">
@@ -358,7 +373,7 @@
                                 class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100"
                                 data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
                                 aria-controls="accordion-collapse-body-3">
-                                <span>Is there a Figma file available?</span>
+                                <span>3. What is CSS box model and how does it work?</span>
                                 <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -370,13 +385,7 @@
                         <div id="accordion-collapse-body-3" class="hidden"
                             aria-labelledby="accordion-collapse-heading-3">
                             <div class="p-5 font-light border border-b-0 border-gray-200">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and
-                                    designed using the Figma software so everything you see in the library has a design
-                                    equivalent in our Figma file.</p>
-                                <p class="text-gray-500 dark:text-gray-400">Check out the <a
-                                        href="https://flowbite.com/figma/"
-                                        class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-                                    based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+                                <p class="mb-2 text-grey">The CSS box model is a layout model used in CSS to calculate the size and position of elements on a webpage. It defines how the content, padding, borders, and margins of an element are calculated and rendered on a page.</p>
                             </div>
                         </div>
                         <h2 id="accordion-collapse-heading-4">
@@ -384,7 +393,7 @@
                                 class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200  hover:bg-gray-100"
                                 data-accordion-target="#accordion-collapse-body-4" aria-expanded="false"
                                 aria-controls="accordion-collapse-body-4">
-                                <span>What are the differences between Flowbite and Tailwind UI?</span>
+                                <span>4. What is semantic tag?</span>
                                 <svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
                                     viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd"
@@ -396,26 +405,7 @@
                         <div id="accordion-collapse-body-4" class="hidden"
                             aria-labelledby="accordion-collapse-heading-4">
                             <div class="p-5 font-light border border-t-0 border-gray-200">
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core
-                                    components from Flowbite are open source under the MIT license, whereas Tailwind UI
-                                    is a
-                                    paid product. Another difference is that Flowbite relies on smaller and standalone
-                                    components, whereas Tailwind UI offers sections of pages.</p>
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using
-                                    both
-                                    Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason
-                                    stopping
-                                    you from using the best of two worlds.</p>
-                                <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:
-                                </p>
-                                <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400">
-                                    <li><a href="https://flowbite.com/pro/"
-                                            class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a>
-                                    </li>
-                                    <li><a href="https://tailwindui.com/" rel="nofollow"
-                                            class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a>
-                                    </li>
-                                </ul>
+                                <p class="mb-2 text-grey">Semantic tags are HTML tags that provide meaning and context to the content on a webpage.</p>
                             </div>
                         </div>
                     </div>
@@ -434,45 +424,44 @@
     <footer class="bg-black h-[1200px] md:h-[700px] lg:h-[400px] mt-20 mx-auto">
         <!-- grid -->
         <!-- full container div -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 justify-center items-center text-left h-full mx-auto px-10">
-            <div>
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 justify-center items-center text-left h-full mx-auto px-10 container">
+            <div class="text-silver">
                 <img class="img-fluid my-auto" src="images/logo.png" alt="">
-                <p class="text-sm text-white font-poppins mt-10">There are many variations of passages of Lorem Ipsum
-                    available, but the majority have suffered alteration in some form, by injected humour.</p>
+                <p class="text-sm font-poppins mt-10">All rights reserved. The information provided on this website is intended for general informational purposes only and is not legal advice. The hiring of a lawyer is an important decision that should not be based solely upon advertisements.</p>
             </div>
-            <div>
+            <div class="text-silver">
                 <h1 class="text-2xl text-white font-eg mt-16 gap-5">Useful Link</h1>
-                <h6 class="text-sm text-white font-poppins mt-10">Home</h6>
-                <h6 class="text-sm text-white font-poppins my-4">About Us</h6>
-                <h6 class="text-sm text-white font-poppins">Cases</h6>
-                <h6 class="text-sm text-white font-poppins my-4">Blog</h6>
-                <h6 class="text-sm text-white font-poppins">Contact Us</h6>
+                <h6 class="text-sm font-poppins mt-10">Home</h6>
+                <h6 class="text-sm font-poppins my-4">About Us</h6>
+                <h6 class="text-sm font-poppins">Cases</h6>
+                <h6 class="text-sm font-poppins my-4">Blog</h6>
+                <h6 class="text-sm font-poppins">Contact Us</h6>
             </div>
-            <div>
+            <div class="text-silver">
                 <h1 class="text-2xl text-white font-eg mt-12">Contact Now</h1>
-                <h6 class="text-sm text-white font-poppins mt-10">555 4th 5t NW, Washington</h6>
-                <h6 class="text-sm text-white font-poppins ">DC 20530, United States</h6>
-                <h6 class="text-sm text-white font-poppins mt-4">+88 01750 000 000</h6>
-                <h6 class="text-sm text-white font-poppins ">+88 01750 000 000</h6>
-                <h6 class="text-sm text-white font-poppins mt-4">info@gmail.com</h6>
-                <h6 class="text-sm text-white font-poppins ">info@gmail.com</h6>
+                <h6 class="text-sm font-poppins mt-10">555 4th 5t NW, Washington</h6>
+                <h6 class="text-sm font-poppins ">DC 20530, United States</h6>
+                <h6 class="text-sm font-poppins mt-4">+88 01750 000 000</h6>
+                <h6 class="text-sm font-poppins ">+88 01750 000 000</h6>
+                <h6 class="text-sm font-poppins mt-4">info@gmail.com</h6>
+                <h6 class="text-sm font-poppins ">info@gmail.com</h6>
             </div>
             <div>
-                <h1 class="text-2xl text-white font-eg -mt-4">Subscribe</h1>
-                <p class="text-sm text-white font-poppins mt-10">Subscribe for our latest & Articles. We Wont Give You
-                    Spam Mails</p>
+                <h1 class="text-2xl text-white font-eg mt-9">Subscribe</h1>
+                <p class="text-sm text-silver font-poppins mt-10">A legal consultations firm offer email subscription service to its clients in order to provide updates on legal developments, firm news, and upcoming events.</p>
 
                 <!-- email , search form flow bite - modified it START -->
                 <form>
                     <div class="flex mt-5">
                         <label for="search-dropdown"
-                            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Your Email</label>
+                            class="mb-2 text-sm font-medium text-silver sr-only">Your Email</label>
                         <div class="relative w-full">
                             <input type="search" id="search-dropdown"
                                 class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-md border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="Email Address" required>
                             <button type="submit"
-                                class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-coffee rounded-r-lg border hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 "> 
+                                class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-coffee rounded-r-lg border hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 ">
                                 <i class="fa-solid fa-paper-plane"></i>
                             </button>
                         </div>
